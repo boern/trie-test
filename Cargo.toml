@@ -1,5 +1,5 @@
 [package]
-name = "example-subxt"
+name = "state-proof-example"
 version = "0.1.0"
 edition = "2021"
 
