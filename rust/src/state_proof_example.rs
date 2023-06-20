@@ -1,3 +1,6 @@
+#![allow(unused_imports)]
+#![allow(dead_code)]
+
 use codec::Decode;
 use sp_core::H256;
 
