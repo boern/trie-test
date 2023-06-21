@@ -104,6 +104,8 @@ pub async fn parachain_header_state_proof() -> Result<(), Box<dyn std::error::Er
     //     .unwrap();
 
     let value = trie.get_with(&encode_storage_key, |v: &[u8]| v.to_vec()).unwrap().unwrap(); // actually gets the value from the trie proof
+    println!("The Key Value:\n{:?}", value);
+    
     let decode_value :Vec<u8>= codec::Decode::decode(&mut &value[..]).unwrap();
     
     println!("get header from trie proof value:\n0x{}", hex::encode(decode_value.clone()));
